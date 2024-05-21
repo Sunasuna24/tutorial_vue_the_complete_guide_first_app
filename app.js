@@ -1,15 +1,30 @@
-const button = document.querySelector('button');
-const input = document.querySelector('input');
-const unorderedList = document.querySelector('ul');
+Vue.createApp({
+  data() {
+    return {
+      addedGoals: [],
+      goal: ''
+    };
+  },
+  methods: {
+    addGoal() {
+      this.addedGoals.push(this.goal);
+      this.goal = '';
+    }
+  }
+}).mount('#app');
 
-button.addEventListener('click', addGoal);
+// const button = document.querySelector('button');
+// const input = document.querySelector('input');
+// const unorderedList = document.querySelector('ul');
 
-function addGoal() {
-  const value = input.value;
-  const listItem = document.createElement('li');
-  listItem.textContent = value;
+// button.addEventListener('click', addGoal);
 
-  unorderedList.appendChild(listItem);
+// function addGoal() {
+//   const value = input.value;
+//   const listItem = document.createElement('li');
+//   listItem.textContent = value;
 
-  input.value = '';
-}
+//   unorderedList.appendChild(listItem);
+
+//   input.value = '';
+// }
