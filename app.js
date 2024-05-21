@@ -10,4 +10,6 @@ function addGoal() {
   listItem.textContent = value;
 
   unorderedList.appendChild(listItem);
+
+  input.value = '';
 }
