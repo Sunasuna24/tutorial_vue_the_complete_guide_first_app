@@ -1,4 +1,16 @@
-
+Vue.createApp({
+  data() {
+    return {
+      addedGoals: [],
+      goal: ''
+    };
+  },
+  methods: {
+    addGoal() {
+      this.addedGoals.push(this.goal);
+    }
+  }
+});
 
 // const button = document.querySelector('button');
 // const input = document.querySelector('input');
