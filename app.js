@@ -10,7 +10,7 @@ Vue.createApp({
       this.addedGoals.push(this.goal);
     }
   }
-});
+}).mount('#app');
 
 // const button = document.querySelector('button');
 // const input = document.querySelector('input');
